@@ -25,7 +25,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 		} else {
 			return null;
 		}
-
 	}
 
 	@Override

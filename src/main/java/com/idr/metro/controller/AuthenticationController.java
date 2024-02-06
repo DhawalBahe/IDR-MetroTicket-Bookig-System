@@ -14,16 +14,10 @@ import com.idr.metro.entity.User;
 import com.idr.metro.service.AuthenticationService;
 
 @RestController
-@RequestMapping("/metroapp")
 public class AuthenticationController {
 
 	@Autowired
 	AuthenticationService authenticationService;
-
-	@GetMapping("/hello")
-	public String hello() {
-		return "hello";
-	}
 
 	@PostMapping("/signup")
 	public User Signup(@RequestBody User user) {

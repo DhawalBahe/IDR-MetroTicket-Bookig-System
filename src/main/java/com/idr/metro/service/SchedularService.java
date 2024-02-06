@@ -8,4 +8,6 @@ public interface SchedularService {
 
 	List<Schedule> getlist();
 
+	List<Schedule> getSchedulebyTime(String trainTimeing);
+
 }

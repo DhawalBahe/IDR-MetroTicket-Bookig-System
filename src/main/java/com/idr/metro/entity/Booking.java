@@ -22,9 +22,11 @@ public class Booking {
 	private Long id;
 	private String sourceStation;
 	private String destinationStation;
-	private String jurneyDate;
-	private String noOfPasanger;
-	private Long cost;
+	private Long trainNo;
+	private String journeyTime;
+	private Long noOfPassengers;
+	private Double cost;
 	private String status;
-	private Long bokingNo;
+	private String barCode;
+
 }
