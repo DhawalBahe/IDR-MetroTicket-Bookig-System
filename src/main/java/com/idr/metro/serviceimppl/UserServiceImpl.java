@@ -39,4 +39,30 @@ public class UserService {
             throw new RuntimeException("Error updating user: " + e.getMessage());
         }
     }
+
+    // date function
+
+    // Assume usersList is a list containing all users
+    private List<User> usersList;
+
+    // Constructor to initialize the usersList
+    public UserService(List<User> usersList) {
+        this.usersList = usersList;
+    }
+
+    public List<User> getUsersByCreationDateRange(Date startDate, Date endDate) {
+        List<User> usersInRange = new ArrayList<>();
+
+        // Iterate through all users
+        for (User user : usersList) {
+            // Check if user's creation date falls within the specified range
+            if (user.isCreationDateWithinRange(startDate, endDate)) {
+                // Add the user to the list
+                usersInRange.add(user);
+            }
+        }
+
+        // Return the list of users within the specified date range
+        return usersInRange;
+    }
 }
